@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Chat App</title></head>
+<body>
+  <input id="messageInput" placeholder="Type a message" />
+  <button id="sendBtn">Send</button>
+  <ul id="messageList"></ul>
+
+  <script>
+    document.getElementById('sendBtn').addEventListener('click', async () => {
+      const input = document.getElementById('messageInput');
+      const message = input.value;
+      const res = await fetch('/api/send-message', {
+        method: 'POST',
+        body: JSON.stringify({ message }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+      const data = await res.json();
+      const li = document.createElement('li');
+      li.textContent = data.message;
+      document.getElementById('messageList').appendChild(li);
+    });
+  </script>
+</body>
+</html>
