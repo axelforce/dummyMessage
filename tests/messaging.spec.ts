@@ -9,7 +9,7 @@ test.describe('Dummy Messaging App', () => {
   test('should send message and display it in the list', async ({ page }) => {
     const messagingPage = new MessagingPage(page);
     await messagingPage.sendMessage('Hello!');
-    await page.pause(); // Pause to allow the message to be sent and displayed
+    // await page.pause(); // Pause to allow the message to be sent and displayed
     await expect(messagingPage.lastMessage()).toHaveText('Hello!');
   });
 });
