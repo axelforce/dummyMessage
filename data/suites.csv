@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","447","should send message and display it in the list","","Thu Mar 05 03:32:42 UTC 2026","passed","Thu Mar 05 03:32:43 UTC 2026","Dummy Messaging App","messaging.spec.ts","",""
+"","325","should send message and display it in the list","","Fri Mar 06 03:30:28 UTC 2026","passed","Fri Mar 06 03:30:28 UTC 2026","Dummy Messaging App","messaging.spec.ts","",""
